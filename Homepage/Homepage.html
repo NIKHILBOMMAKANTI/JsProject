@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+
+  <!-- Firebase Database SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+
+  <!---Fontawsome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!--SweetAlerts-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="../Homepage/Homepage.css">
+
+  <title>Ecommerce Project</title>
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../Homepage/Homepage.html">
+        <img src="../Images/Zudio.webp" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <form class="d-flex mx-auto" style="width: 50%;">
+          <input class="form-control me-2" type="search" placeholder="Search For Products" id="search-input"
+            aria-label="Search">
+          <button class="btn btn-dark btn-outline" type="submit" id="search-btn">Search</button>
+        </form>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../Signup/Signup.html">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Login/Login.html">Login</a>
+          </li>
+          <li class="nav-item cart-item">
+            <a class="nav-link" href="../Cart/Cart.html">Cart</a>
+            <i class="fa fa-cart-shopping icon-color"></i>
+          </li>
+          <li class="nav-item cart-item">
+            <a class="nav-link" href="../Wishlist/Wishlist.html">Wishlist</a>
+            <i class="fa-solid fa-heart icon-color"></i>
+          </li>
+          <li class="nav-item cart-item">
+            <a class="nav-link" href="../Ecommerce Project/Login/Login.html">
+              <i class="fa-solid fa-user"></i>
+              <span id=loggeinuser class="loggeinuser"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="main-container flex-column flex-lg-row">
+      <section class="filter-section  p-3 rounded w-100 ">
+        <aside>
+          <div>
+
+            <h2 class="text-center mb-4 fw-bold">Filters</h2>
+
+
+            <div class="filter-category mb-4 border-bottom pb-3">
+              <div class="fw-bold p-0  text-dark filter-container" id="filter">
+                Menswear
+                <div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="content mt-2 hidden" id="content">
+                <label for="vebnor" class="d-block">
+                  <input type="checkbox" id="vebnor" value="VeBNoR" onchange="filterProducts()"> Vebnor
+                </label>
+                <label for="try-this" class="d-block mt-2">
+                  <input type="checkbox" id="try-this" value="Try This" onchange="filterProducts()"> Try This
+                </label>
+                <label for="3bros" class="d-block mt-2">
+                  <input type="checkbox" id="3bros" value="3BROS" onchange="filterProducts()"> 3Bros
+                </label>
+                <label for="technosport" class="d-block mt-2">
+                  <input type="checkbox" id="technosport" value="TECHNOSPORT" onchange="filterProducts()">
+                  Technosport
+                </label>
+                <label for="ftx" class="d-block mt-2">
+                  <input type="checkbox" id="ftx" value="FTX" onchange="filterProducts()"> Ftx
+                </label>
+                <label for="jugular" class="d-block mt-2">
+                  <input type="checkbox" id="jugular" value="JUGULAR" onchange="filterProducts()"> Jugular
+                </label>
+                <label for="combraided" class="d-block mt-2">
+                  <input type="checkbox" id="combraided" value="COMBRAIDED" onchange="filterProducts()">
+                  Combraided
+                </label>
+                <label for="nayak-fashion" class="d-block mt-2">
+                  <input type="checkbox" id="nayak-fashion" value="Nayak Fashion" onchange="filterProducts()"> Nayak
+                  Fashion
+                </label>
+                <label for="blue-martin" class="d-block mt-2">
+                  <input type="checkbox" id="blue-martin" value="BLUE MARTIN" onchange="filterProducts()">
+                  Blue Martin
+                </label>
+                <label for="peter-england" class="d-block mt-2">
+                  <input type="checkbox" id="peter-england" value="PETER ENGLAND" onchange="filterProducts()"> Peter
+                  England
+                </label>
+                <label for="allen-solly" class="d-block mt-2">
+                  <input type="checkbox" id="allen-solly" value="Allen Solly" onchange="filterProducts()">
+                  Allen Solly
+                </label>
+                <label for="jack-and-jones" class="d-block mt-2">
+                  <input type="checkbox" id="jack-and-jones" value="JACK & JONES" onchange="filterProducts()"> Jack &
+                  Jones
+                </label>
+                <label for="raymond" class="d-block mt-2">
+                  <input type="checkbox" id="raymond" value="Raymond" onchange="filterProducts()"> Raymond
+                </label>
+              </div>
+            </div>
+
+
+            <div class="filter-category mb-4 border-bottom pb-3">
+              <div class="fw-bold p-0  text-dark filter-container" id="pricefilter">
+                Price Range
+                <div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+
+              <div class="content mt-3 hidden" id="pricecontent">
+                <label for="price1" class="d-block mt-2">
+                  <input type="checkbox" id="price1" value="1000" onchange="filterbasedonprice('1000')"> 1000 And Above
+                </label>
+                <label for="price1" class="d-block mt-2">
+                  <input type="checkbox" id="price2" value="800" onchange="filterbasedonprice('800')"> 800 And Above
+                </label>
+                <label for="price1" class="d-block mt-2">
+                  <input type="checkbox" id="price3" value="600" onchange="filterbasedonprice('600')"> 600 And Above
+                </label>
+                <label for="price1" class="d-block mt-2">
+                  <input type="checkbox" id="price4" value="400" onchange="filterbasedonprice('400')"> 400 And Above
+                </label>
+                <label for="price2" class="d-block mt-2">
+                  <input type="checkbox" id="price5" value="200" onchange="filterbasedonprice('200')"> 200 And Above
+                </label>
+              </div>
+            </div>
+
+
+            <div class="filter-category mb-4 border-bottom pb-3">
+              <div class="fw-bold p-0  text-dark filter-container" id="ratingfilter">
+                Rating
+                <div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+
+              <div class="content mt-3 hidden" id="ratingcontent">
+                <label for="price1" class="d-block">
+                  <input type="checkbox" id="price1" value="4.0" onchange="filterProducts('4')"> 4.0 And Above
+                </label>
+                <label for="price2" class="d-block mt-2">
+                  <input type="checkbox" id="price2" value="3.5" onchange="filterProducts('3.5')"> 3.5 and above
+                </label>
+                <label for="price2" class="d-block mt-2">
+                  <input type="checkbox" id="price2" value="3.0" onchange="filterProducts('3')"> 3.0 and above
+                </label>
+                <label for="price2" class="d-block mt-2">
+                  <input type="checkbox" id="price2" value="2.0" onchange="filterProducts('2')"> 2.0 and above
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-category mb-4 border-bottom pb-3">
+              <div class="fw-bold p-0  text-dark filter-container" id="reviewfilter">
+                Reviews
+                <div>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+              </div>
+              <div class="content mt-3 hidden" id="reviewcontent">
+                <label for="Highly-Reviewed" class="d-block">
+                  <input type="checkbox" id="Highly-Reviewed" value="1000" onchange="filterbasedonreview('1000')">
+                  Highly Reviewed
+                </label>
+                <label for="Moderately-Reviewed" class="d-block mt-2">
+                  <input type="checkbox" id="Moderately-Reviewed" value="500" onchange="filterbasedonreview('500')">
+                  Moderately Reviewed
+                </label>
+                <label for="Fairly-Reviewed" class="d-block mt-2">
+                  <input type="checkbox" id="Fairly-Reviewed" value="200" onchange="filterbasedonreview('200')"> Fairly
+                  Reviewed
+                </label>
+                <label for="Low-Reviews" class="d-block mt-2">
+                  <input type="checkbox" id="Low-Reviews" value="10" onchange="filterbasedonreview('50')">
+                  Low Reviews
+                </label>
+              </div>
+            </div>
+        </aside>
+      </section>
+
+
+      <section class="Product-section mt-3">
+        <div id="product-container" class=".product-container">
+
+
+        </div>
+      </section>
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination mt-3 mb-3">
+        <li class="page-item"><a class="page-link" href="#" id="Previous">Previous</a></li>
+        <li class="page-item"><a class="page-link " id="active-page" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" id="page-2">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" id="page-3">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" id="Next">Next</a></li>
+      </ul>
+    </nav>
+  </main>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script type="module" src="../Homepage/Homepage.js"></script>
+</body>
+
+</html>

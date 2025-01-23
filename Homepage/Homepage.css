@@ -1,0 +1,255 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Futura,sans-serif;
+  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: Futura,sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+.btn-outline{
+    border: 1px solid white;
+}
+
+.btn-outline:hover{
+    background-color: white !important;
+    color: black;
+    
+}
+.navbar-dark{
+
+	/*Navy Blue*/
+	background-color: #000080 !important;
+	/*Variation of Navy Blue*/
+	/* background-color: #1E3B92 !important; */
+	/* background-color: #861657 !important; */
+	
+	/*Sky Blue*/
+	/* background-color: #87CEEB !important; */
+
+	/*Ash(one of the official website)*/
+	/* background-color: #2c4152 !important;  */
+
+	/*Charcoalgrey*/
+	/* background-color: #4A4A4A !important; */
+
+	/*Cerulean*/
+	/* background-color: #006989 !important; */
+
+	/* background-color: #415a77 !important; */
+	/* background-color: #2c6e49 !important; */
+}
+.loggeinuser{
+	color: #ffff;
+}
+.icon-color{
+    color: white;
+    padding-top: 0.5rem;
+}
+.cart-item{
+    display: flex;
+	padding-right: 0.5rem;
+   
+}
+.fa-user{
+	color: white;
+}
+.main-container{
+	display: flex;
+	width: 100%;
+}
+.btn-dark{
+    background-color: #000080 !important;
+}
+.nav-link{
+	color: #FFFFFF !important;
+}
+
+
+/*Filterations*/
+.content{
+	display: flex;
+    flex-direction: column;
+}
+.hidden{
+	display: none;
+}
+.visible{
+	display: block;
+}
+.border-bottom{
+	border-bottom: 3px solid #dee2e6 !important;
+}
+/* .filter-section{
+	width: 20%;
+} */
+.list-group-item{
+	border: none;
+} 
+.filter-container{
+	display: flex;
+	justify-content: space-between;
+}
+.review-rating-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.rating{
+	color: #000080;
+	border: 1px solid #000080;
+	padding: 5px;
+	border-radius: 19px;
+}
+.list-group-item > strong{
+	font-weight: bolder;
+	margin-right: 10px;
+}
+ 
+/*Paginations*/
+.pagination{
+	justify-content: center;
+}
+.page-link{
+	color: black;
+}
+
+#active-page{
+	background-color:  #000080;
+	color: white;
+}
+
+/* Product card Stylings*/
+.btn-primary{
+	background-color: #000080;
+	border-color: #000080;
+	width: 100%;
+	border-radius: 20px;
+}
+.btn-primary:hover{
+	background-color: white;
+	border-color: #000080;
+	color: black;
+}
+.card-body{
+padding: 0.5rem 0.5rem;
+}
+.card-title{
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+.wishlist-container{
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+}
+.wishlist-container > i {
+	font-size: 1.5rem;
+}
+.fa-heart-active{
+	background-color: red; 
+	color: white ;      
+	width: 40px;           
+	height: 40px;       
+	display: inline-flex;  
+	align-items: center;   
+	justify-content: center; 
+	border-radius: 50%;    
+	font-size: 20px; 
+}
+.fa-heart-inactive{
+	color: #000080;      
+  }
+.product-container{
+	padding: 20px;
+}
+.card .card-img-top{
+	padding: 12px;
+}
+/*Media Querry*/
+@media (min-width: 576px) {
+	.product-container{
+		grid-template-columns: repeat(2,1fr);
+	}
+	.card{
+		width: 18rem !important;
+	}
+}
+@media (min-width: 724px) {
+
+	.product-container{
+		grid-template-columns: repeat(2,1fr);
+	}
+	.filter-section{
+		width: 30% !important;
+	}
+	.card{
+		width: 18rem !important;
+	}
+	.main-container{
+		display: flex;
+		flex-direction: row !important;
+	}
+}
+@media (min-width: 1100px) {
+	.product-container{
+		grid-template-columns: repeat(4,1fr);
+	}
+	.filter-section{
+		width: 30% !important;
+	}
+	.card{
+		width: 18rem !important;
+	}
+}
+
+@media (min-width: 1786px) {
+	.product-container{
+		grid-template-columns: repeat(5,1fr);
+		padding-left: 0px !important;
+	}
+}

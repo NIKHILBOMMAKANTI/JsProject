@@ -1,0 +1,110 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* @import 'tailwindcss/utilities'; */
+
+/* *{
+    font-family: Futura,sans-serif;
+} */
+/*Navbar stylings*/
+.navbar, .navbar-nav .nav-link {
+    color: white !important;  
+    all: unset;
+}
+.container-fluid{
+    background-color: #000080;
+}
+.btn-outline{
+    border: 1px solid white;
+}
+
+.btn-outline:hover{
+    background-color: white !important;
+    color: black;
+    
+}
+.navbar-dark{
+	background-color: #000080 !important;
+}
+.icon-color{
+    color: white;
+    padding-top: 0.5rem;
+}
+.cart-item{
+    display: flex;
+   
+}
+.fa-user{
+	color: white;
+}
+.main-container{
+	display: flex;
+	width: 100%;
+}
+.btn-dark{
+    background-color: #000080 !important;
+}
+.icon-color{
+    color: white;
+    padding-top: 0.8rem;
+}
+.cart-item{
+    display: flex;
+	padding-right: 0.5rem;
+   
+}
+.card-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-primary{
+    background-color: #000080;
+    border-color: #000080;
+    border-radius: 20px;
+}
+
+.btn-primary:hover{
+    color: #000080;
+    background-color: #FFFFFF;
+    border-color: #000080;
+}
+.card{
+    border: none;
+}
+.product-card{
+    border: 1px solid #000080;
+}
+.product-img{
+    width: 100%;
+    height: 278px;
+}
+.card-body>p{
+    margin-bottom: 0.4rem;
+}
+.quantity{
+    width: 15%;
+}
+#Buynowbtn{
+    display: flex;
+    justify-content: center;
+}
+.card-body-text{
+    margin-right: 10px !important;
+}
+
+.wishlist-container{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap:30px;
+}
+
+/* .navbar-nav .nav-link {
+    list-style: none !important; 
+    font-family: inherit !important; 
+    display: inline-block !important; 
+    color: #FFFFFF !important;
+  }
+  .navbar-dark.bg-dark {
+    background-color: #343a40 !important; 
+} */

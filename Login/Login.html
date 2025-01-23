@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Login/Login.css">
+
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js"></script>
+
+  <!-- Firebase Database SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js"></script>
+  <script type="module" src="../Login/Login.js"></script>
+
+  <!--SweetAlerts-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!--Tailwind css-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Login</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <form class="mx-auto">
+      <h4 class="text-center">Login</h4>
+      <div class="mb-3 mt-3">
+        <label for="exampleInputEmail1" class="form-label" >Username</label>
+        <input type="email" class="form-control" id="username" aria-describedby="emailHelp" value="nikhil@gmail.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="Password" value="Nikhil@123">
+        <div id="emailHelp" class="form-text mt-3">Reset Your Password</div>
+      </div>
+      <button type="submit" class="btn btn-dark mt-3" id="login">Login</button>
+    </form>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    <script src="../Login/Login.js"></script>
+
+</body>
+
+</html>
