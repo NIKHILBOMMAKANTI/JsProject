@@ -22,7 +22,7 @@
 	font-size: 20px; 
 }
 .fa-heart-inactive{
-	color: #000080;      
+	color: #006989;      
   }
 
 /*Nav Stylings*/
@@ -36,7 +36,7 @@
     
 }
 .navbar-dark{
-	background-color: #000080 !important;
+	background-color: #006989 !important;
 }
 .icon-color{
     color: white;
@@ -55,19 +55,19 @@
 	width: 100%;
 }
 .btn-dark{
-    background-color: #000080 !important;
+    background-color: #006989 !important;
 }
 
 /* Product card Stylings*/
 .btn-primary{
-	background-color: #000080;
-	border-color: #000080;
+	background-color: #006989;
+	border-color: #006989;
 	width: 100%;
 	border-radius: 20px;
 }
 .btn-primary:hover{
 	background-color: white;
-	border-color: #000080;
+	border-color: #006989;
 	color: black;
 }
 .card-body{
@@ -79,15 +79,17 @@ padding: 0.5rem 0.5rem;
 	align-items: center;
 }
 .rating{
-	color: #000080;
-	border: 1px solid #000080;
+	color: #006989;
+	border: 1px solid #006989;
 	padding: 5px;
 	border-radius: 19px;
 }
 .list-group-item{
     border: none;
 }
-
+.nav-link{
+	color: #FFFFFF !important;
+}
 #heading{
     font-size: 1.5rem;
     padding:8px;
@@ -115,11 +117,20 @@ padding: 0.5rem 0.5rem;
 .matching-products{
 	/* padding-left: 17px; */
 	justify-content: center;
-	gap: 15px;
+	padding: 20px;
+	gap: 30px;
 }
 .card{
 	width: 18rem;
 	
+}
+.card .card-img-top{
+	padding: 12px;
+}
+.product-img{
+    width: 100%;
+    height: 278px;
+    object-fit: contain;
 }
 
 /*Media Qurries*/
@@ -130,6 +141,13 @@ padding: 0.5rem 0.5rem;
 	.card{
 		width: auto;
 	}
+	.img-fluid{
+		width: 100%;
+		height: 350px;
+	}
+	.product-img{
+        object-fit: contain;
+    }
 }
 @media (min-width: 900px) {
 	.matching-products{
@@ -145,18 +163,35 @@ padding: 0.5rem 0.5rem;
 		margin-bottom: 0px;
 		margin-right: 1rem;
 	}
+	.img-fluid{
+		width: 100%;
+		height: 300px;
+		/* max-width: 60%; */
+	}
 }
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
 	.matching-products{
 		grid-template-columns: repeat(4,1fr);
 	}
 	.card{
 		width: 18rem;
 	}
-} */
+	.img-fluid{
+		width: 400px;
+		/* height: 300px; */
+		/* max-width: 60%; */
+	}
+	#heading{
+		justify-content: flex-start;
+		padding-left: 30px;
+	}
+	.product-img{
+        object-fit: fill;
+    }
+}
 @media (min-width: 1200px) {
 	.matching-products{
-		grid-template-columns: repeat(5,1fr);
+		grid-template-columns: repeat(4,1fr);
 	}
 	.card{
 		width: auto;
@@ -164,8 +199,13 @@ padding: 0.5rem 0.5rem;
 	.row{
 		max-width: 80%;
 	}
-	/* .img-fluid{
-		width: 100%;
-		height: 200px;
-	} */
+	.img-fluid{
+		width: 400px;
+		/* height: 300px; */
+	}
+
+	.product-img{
+        object-fit: fill;
+
+    }
 }

@@ -60,27 +60,7 @@ table {
     
 }
 .navbar-dark{
-
-	/*Navy Blue*/
-	background-color: #000080 !important;
-	/*Variation of Navy Blue*/
-	/* background-color: #1E3B92 !important; */
-	/* background-color: #861657 !important; */
-	
-	/*Sky Blue*/
-	/* background-color: #87CEEB !important; */
-
-	/*Ash(one of the official website)*/
-	/* background-color: #2c4152 !important;  */
-
-	/*Charcoalgrey*/
-	/* background-color: #4A4A4A !important; */
-
-	/*Cerulean*/
-	/* background-color: #006989 !important; */
-
-	/* background-color: #415a77 !important; */
-	/* background-color: #2c6e49 !important; */
+	background-color: #006989 !important;
 }
 .loggeinuser{
 	color: #ffff;
@@ -102,7 +82,7 @@ table {
 	width: 100%;
 }
 .btn-dark{
-    background-color: #000080 !important;
+	background-color: #006989 !important;
 }
 .nav-link{
 	color: #FFFFFF !important;
@@ -123,9 +103,6 @@ table {
 .border-bottom{
 	border-bottom: 3px solid #dee2e6 !important;
 }
-/* .filter-section{
-	width: 20%;
-} */
 .list-group-item{
 	border: none;
 } 
@@ -139,8 +116,8 @@ table {
 	align-items: center;
 }
 .rating{
-	color: #000080;
-	border: 1px solid #000080;
+	color: #006989;
+	border: 1px solid #006989;
 	padding: 5px;
 	border-radius: 19px;
 }
@@ -158,21 +135,21 @@ table {
 }
 
 #active-page{
-	background-color:  #000080;
+	background-color:  #006989;
 	color: white;
 }
 
 /* Product card Stylings*/
 .btn-primary{
-	background-color: #000080;
-	border-color: #000080;
+	background-color: #006989;
+	border: 2px solid white !important;
 	width: 100%;
 	border-radius: 20px;
 }
 .btn-primary:hover{
 	background-color: white;
-	border-color: #000080;
-	color: black;
+	border: 1px solid #006989 !important;
+	color: #006989;
 }
 .card-body{
 padding: 0.5rem 0.5rem;
@@ -201,8 +178,8 @@ padding: 0.5rem 0.5rem;
 	border-radius: 50%;    
 	font-size: 20px; 
 }
-.fa-heart-inactive{
-	color: #000080;      
+.fa-heart-inactive{	
+	color: #006989; 
   }
 .product-container{
 	padding: 20px;

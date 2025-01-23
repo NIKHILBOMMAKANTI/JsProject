@@ -95,13 +95,17 @@ function displayProductById() {
       <p><strong class="brand-info_heading">Review:</strong>${Product.review}</p>
        <div class="card-body">
        <button class="btn btn-primary addtocartbtn" type="button" id="addtocart">Add to Cart</button>
-       <button class="btn btn-primary product-btn" type="button" id="addtocart">Buy Now</button>
+       <button class="btn btn-primary product-btn" type="button" id="product-btn">Buy Now</button>
     </div>
     </div>
   </div>
 </div>`;
 
-    // AddtoCart Event Listner
+    //BuyNow Event Listner
+    console.log(productcard);
+    let productbtn = productcard.querySelector("#product-btn")
+    productbtn.addEventListener("click", redirectToCart);
+    
     let Addtocartbtn = productcard.querySelector("button");
     Addtocartbtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -110,7 +114,6 @@ function displayProductById() {
     });
 
       let img = productcard.querySelector("img");
-      // img.setAttribute("width", "300px");
       img.setAttribute("height", "300px");
 
       productcontainer.append(productcard);
@@ -120,6 +123,7 @@ function displayProductById() {
   getMatchingProducts(id, brand);
 }
 
+//Fetching Matching Products
 let matchingproducts = document.getElementById("matching-products");
 let filteredData = [];
 function getMatchingProducts(productid, productbrand) {
@@ -131,21 +135,15 @@ function getMatchingProducts(productid, productbrand) {
       filteredData[filteredData.length] = Products;
     }
   });
-  let productPageData = filteredData.slice(0, 5);
-
+  let productPageData = filteredData.slice(0, 4);
   console.log(filteredData);
   console.log(productPageData);
-
   matchingproducts.style.display = "grid";
-  // matchingproducts.style.gridTemplateColumns = "repeat(5 , 1fr)";
-  // matchingproducts.style.gap = "15px";
   productPageData.forEach((Products) => {
     let productcard = document.createElement("div");
     productcard.setAttribute("class", "card");
-    // productcard.style.width = "18rem";
-
     productcard.innerHTML = `<div class="wishlist-container"><i class="fa-regular fa-heart fa-heart-inactive"></i></div>
-    <img src=${Products.Image} class="card-img-top" alt="${Products.Description}">
+    <img src=${Products.Image} class="card-img-top product-img" alt="${Products.Description}">
     <div class="card-body">
       <h5 class="card-title">${Products.Description}</h5>
     </div>
@@ -250,4 +248,9 @@ function addToCart(Productitem) {
     `users/${loggedinuser}/cart/cart_${Productitem.id}`
   );
   set(addtocardref, Productitem);
+}
+
+//Redirect To Cart
+function redirectToCart(){
+  window.location.href = "http://127.0.0.1:5503/Project/Cart/Cart.html";
 }

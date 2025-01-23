@@ -133,7 +133,6 @@ function fetchDefaultProducts() {
       e.preventDefault();
       addtowishlist(Products);
     });
-    // console.log(wishlist);
 
     //Append the Product-id and Product-Brand to the Url
     productcard.addEventListener("click", () => {

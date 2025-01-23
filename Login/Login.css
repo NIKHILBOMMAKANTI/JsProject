@@ -44,7 +44,7 @@ table {
 }
 body{
     
-    background-color: #000080;
+    background-color: #006989;
     font-family: Futura,sans-serif;
 }
 form{
@@ -52,7 +52,9 @@ form{
     padding: 50px;
     background-color: white;
     border-radius: 20px;
-    margin-top: 150px;
+    /* margin-top: 150px; */
+    margin-top: 100px;
+    margin-bottom: 100px;
     font-family: Futura,sans-serif;
     font-style: normal;    
 }
@@ -66,28 +68,26 @@ h4{
 .btn-dark{
     width: 100%;
     border: none;
-    background-color: #000080!important;
+    background-color: #006989!important;
     color: white;
     border-radius: 20px;
 }
-.form-control{
-    /* color: black;
-    border-bottom-color: black;
-    border: none;
-    border-bottom: 1px solid;
-    border-radius: 4px 4px 0 0; */
-    /* box-shadow: black !important; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1) !important;
-
-
+.btn-dark:hover{
+    background-color: #ffff !important;
+	border: 1px solid #006989 !important;
+	color: #006989;
 }
-/* .text-center{
-    color: #7066e0;
-} */
+
+.form-control{
+    box-shadow: 0px 4px 4px rgba(0, 105, 137, 0.3)  !important;
+}
+
 /* Tablet View */
-@media (min-width: 586px) and (max-width: 768px) {
+@media (min-width: 586px) {
     form{
         width: 50%;
+        margin-top: 150px;
+
     }
 }
 

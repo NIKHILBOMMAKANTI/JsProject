@@ -1,3 +1,6 @@
+*{
+    font-family: Futura,sans-serif;
+}
 /*Cart Stylings*/
 .cartimage{
     width: 80px;
@@ -10,25 +13,26 @@
     align-items: center;
 }
 .btn-primary{
-    background-color: #000080;
-    border-color: #000080;
+    background-color: #006989;
+    border-color: #006989;
     border-radius: 20px;
 }
 
 .btn-primary:hover{
-    color: #000080;
+    color: #006989;
     background-color: #FFFFFF;
-    border-color: #000080;
+    border-color: #006989;
 }
 .card{
     border: none;
 }
 .product-card{
-    border: 1px solid #000080;
+    border: 1px solid #006989;
 }
 .product-img{
     width: 100%;
     height: 278px;
+    object-fit: contain;
 }
 .card-body>p{
     margin-bottom: 0.4rem;
@@ -45,19 +49,19 @@
 }
 /*Navbar stylings*/
 .btn-outline{
-    border: 1px solid white;
+    border: 1px solid #FFFFFF;
 }
 
 .btn-outline:hover{
-    background-color: white !important;
+    background-color: #FFFFFF !important;
     color: black;
     
 }
 .navbar-dark{
-	background-color: #000080 !important;
+	background-color: #006989 !important;
 }
 .icon-color{
-    color: white;
+    color: #FFFFFF;
     padding-top: 0.8rem;
 }
 .cart-item{
@@ -65,14 +69,14 @@
    
 }
 .fa-user{
-	color: white;
+	color: #FFFFFF;
 }
 .main-container{
 	display: flex;
 	width: 100%;
 }
 .btn-dark{
-    background-color: #000080 !important;
+    background-color: #006989 !important;
 }
 .cart-container{
     gap: 30px;
@@ -96,25 +100,43 @@
 @media (min-width: 576px) {
 	.cart-container{
 		grid-template-columns: repeat(2,1fr);
-		/* padding-left: 30px; */
 	}
     .card-btn{
         margin-top: 1rem;
         padding: 0px;
     }
-	
+    .product-img{
+        object-fit: contain;
+    }
+}
+@media (min-width: 768px) {
+	.cart-container{
+		grid-template-columns: repeat(2,1fr);
+       
+		
+	}
+    .product-img{
+        object-fit: fill;
+    }
 }
 @media (min-width: 1024px) {
 	.cart-container{
 		grid-template-columns: repeat(3,1fr);
 		/* padding-left: 0px !important; */
 	}
+    .product-img{
+        object-fit: fill;
 
+    }
 }
+
 @media (min-width: 2000px) {
 	.cart-container{
 		grid-template-columns: repeat(4,1fr);
 		/* padding-left: 0px !important; */
 	}
+    .product-img{
+        object-fit: fill;
 
+    }
 }
