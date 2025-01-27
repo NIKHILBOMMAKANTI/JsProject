@@ -192,6 +192,7 @@ function registeruser() {
   Swal.fire({
     title: "You're All Set!",
     text: "Thank you for registering. Your account is now active.",
+    confirmButtonColor: "#006989",
     icon: "success",
   }).then((result) => {
     if (result.isConfirmed) {

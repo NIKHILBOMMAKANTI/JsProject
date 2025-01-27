@@ -424,7 +424,7 @@ function addToCart(Productitem) {
     imageWidth: 225,
     imageHeight: 232,
     imageAlt: "Custom image",
-    confirmButtonColor: "#000080",
+    confirmButtonColor: "#006989",
 
   }).then((result) => {
     if (result.isConfirmed) {
@@ -432,6 +432,7 @@ function addToCart(Productitem) {
       Swal.fire({
         title: "Product Added to Cart!",
         html: "This item has been successfully added to your cart",
+        confirmButtonColor: "#006989",
         timer: 2000,
         timerProgressBar: true,
         didOpen: () => {
@@ -470,7 +471,7 @@ function addtowishlist(Products) {
   Swal.fire({
     title: "Added to Wishlist!",
     text: "Product has been added to your wishlist.",
-    confirmButtonColor: "#000080",
+    confirmButtonColor: "#006989",
     icon: "success",
   }).then((result) => {
     if (result.isConfirmed) {

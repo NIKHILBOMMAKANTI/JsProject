@@ -136,7 +136,7 @@ async function removeCartItem(productid, productbrand, sessionkey) {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#000080",
+      confirmButtonColor: "#006989",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
@@ -145,7 +145,7 @@ async function removeCartItem(productid, productbrand, sessionkey) {
           title: "Deleted!",
           text: "You have removed the item from your cart.",
           icon: "success",
-          confirmButtonColor: "#000080",
+          confirmButtonColor: "#006989",
         });
         remove(userref);
         retrieveAndDisplayCartData();
@@ -221,14 +221,14 @@ async function generateOrderSummary() {
       <hr>
       <p><strong>Total:₹${total}</strong></p>`,
     icon: "info",
-    confirmButtonColor: "#000080",
+    confirmButtonColor: "#006989",
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
         title: "Order Placed!",
         text: "Your order will be delivered shortly",
         icon: "success",
-        confirmButtonColor: "#000080",
+        confirmButtonColor: "#006989",
 
         // let orderref = (database, `/users/${sessionkey}/myorders/order_${index}`)
       }).then((result) => {
@@ -237,7 +237,7 @@ async function generateOrderSummary() {
             title: "Order Delivered to",
             text: `${Address}`,
             icon: "success",
-            confirmButtonColor: "#000080",
+            confirmButtonColor: "#006989",
           });
 
         }
@@ -321,21 +321,21 @@ async function generateProductSummary(Card) {
       <hr>
       <p><strong>Total:₹${total}</strong></p>`,
     icon: "info",
-    confirmButtonColor: "#000080",
+    confirmButtonColor: "#006989",
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
         title: "Order Placed!",
         text: "Your order will be delivered shortly",
         icon: "success",
-        confirmButtonColor: "#000080",
+        confirmButtonColor: "#006989",
       }).then((result) => {
         if (result.isConfirmed) {
           Swal.fire({
             title: "Order Delivered to",
             text: `${Address}`,
             icon: "success",
-            confirmButtonColor: "#000080",
+            confirmButtonColor: "#006989",
           });
         }
       });

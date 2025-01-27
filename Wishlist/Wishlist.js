@@ -121,7 +121,7 @@ let img = card.querySelector("img");
      imageWidth: 225,
      imageHeight: 232,
      imageAlt: "Custom image",
-     confirmButtonColor: "#000080",
+     confirmButtonColor: "#006989",
 
    }).then((result) => {
      if (result.isConfirmed) {
@@ -129,6 +129,7 @@ let img = card.querySelector("img");
        Swal.fire({
          title: "Product Added to Cart!",
          html: "This item has been successfully added to your cart",
+         confirmButtonColor: "#006989",
          timer: 2000,
          timerProgressBar: true,
          didOpen: () => {
@@ -172,7 +173,7 @@ let img = card.querySelector("img");
         text: "You won't be able to revert this!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#000080",
+        confirmButtonColor: "#006989",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!",
       }).then((result) => {
@@ -181,7 +182,7 @@ let img = card.querySelector("img");
             title: "Deleted!",
             text: "You have removed the item from your Wishlist.",
             icon: "success",
-            confirmButtonColor: "#000080",
+            confirmButtonColor: "#006989",
           });
           remove(userref);
           retrieveAndDisplayWishlistData();

@@ -58,7 +58,7 @@ function validateUser() {
         Swal.fire({
           title: "Login Successful",
           text: "You have successfully logged in to your account.",
-          confirmButtonColor: "#000080",
+          confirmButtonColor: "#006989",
           icon: "success",
         }).then((result) => {
           if (result.isConfirmed) {
@@ -75,7 +75,7 @@ function validateUser() {
         icon: "error",
         title: "Authentication Failed",
         text: "Invalid Username or Password",
-        confirmButtonColor: "#000080",
+        confirmButtonColor: "#006989",
       });
     }
   });

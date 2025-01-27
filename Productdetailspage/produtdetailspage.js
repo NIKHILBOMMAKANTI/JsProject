@@ -192,7 +192,7 @@ function addtowishlist(Products) {
   Swal.fire({
     title: "Added to Wishlist!",
     text: "Product has been added to your wishlist.",
-    confirmButtonColor: "#000080",
+    confirmButtonColor: "#006989",
     icon: "success",
   }).then((result) => {
     if (result.isConfirmed) {
@@ -212,6 +212,7 @@ function addToCart(Productitem) {
   Swal.fire({
     title: "Add this item to your cart?",
     text: `Are you sure you want to add this item to Cart.`,
+    confirmButtonColor: "#006989",
     imageUrl: `${Productitem.Image}`,
     imageWidth: 225,
     imageHeight: 232,
@@ -222,6 +223,7 @@ function addToCart(Productitem) {
       Swal.fire({
         title: "Product Added to Cart!",
         html: "This item has been successfully added to your cart",
+        confirmButtonColor: "#006989",
         timer: 2000,
         timerProgressBar: true,
         didOpen: () => {
@@ -235,7 +237,6 @@ function addToCart(Productitem) {
           clearInterval(timerInterval);
         },
       }).then((result) => {
-        /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
           console.log("I was closed by the timer");
         }
