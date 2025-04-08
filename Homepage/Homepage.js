@@ -46,13 +46,16 @@ displayLoggedInUser();
 let productData = [];
 async function getDataFromAPI() {
   let index = 1;
-  const url = "https://ecommerce-api3.p.rapidapi.com/menswear";
+  // const url = "https://ecommerce-api3.p.rapidapi.com/menswear";
+  // const url = 'https://ecommerce-api3.p.rapidapi.com/menswear';
+  // const url = "https://cors-anywhere.herokuapp.com/https://ecommerce-api3.p.rapidapi.com/menswear";
+  const url = "http://localhost:3000/Products"
   const options = {
     method: "GET",
-    headers: {
-      "x-rapidapi-key": "90b6fcc8femshd2825e132f1b219p1dde7djsne0b2ea21bd03",
-      "x-rapidapi-host": "ecommerce-api3.p.rapidapi.com",
-    },
+    // headers: {
+    //   "x-rapidapi-key": "90b6fcc8femshd2825e132f1b219p1dde7djsne0b2ea21bd03",
+    //   "x-rapidapi-host": "ecommerce-api3.p.rapidapi.com",
+    // },
   };
   let response = await fetch(url, options);
   let data = await response.json();
