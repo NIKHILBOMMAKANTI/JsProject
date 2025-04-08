@@ -41,7 +41,7 @@ let productData = [];
 let productcontainer = document.getElementById("product-container");
 async function getDataFromAPI() {
   let index = 1;
-  const url = "http://localhost:3000/Products";
+  const url = "https://jsproject-58g2.onrender.com/Products";
   const options = {
     method: "GET",
     // headers: {

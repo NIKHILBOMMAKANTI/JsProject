@@ -49,7 +49,7 @@ async function getDataFromAPI() {
   // const url = "https://ecommerce-api3.p.rapidapi.com/menswear";
   // const url = 'https://ecommerce-api3.p.rapidapi.com/menswear';
   // const url = "https://cors-anywhere.herokuapp.com/https://ecommerce-api3.p.rapidapi.com/menswear";
-  const url = "http://localhost:3000/Products"
+  const url = "https://jsproject-58g2.onrender.com/Products"
   const options = {
     method: "GET",
     // headers: {
