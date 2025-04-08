@@ -63,7 +63,7 @@ function validateUser() {
         }).then((result) => {
           if (result.isConfirmed) {
             window.location.href =
-              "http://127.0.0.1:5503/Project/Homepage/Homepage.html";
+              "/Project/index.html";
           }
         });
 
